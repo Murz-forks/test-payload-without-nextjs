@@ -8,6 +8,7 @@
   "dependencies": {
     "@hono/node-server": "^1.13.7",
     "@payloadcms/db-mongodb": "^3.2.1",
+    "@payloadcms/richtext-lexical": "^3.2.2",
     "hono": "^4.6.12",
     "payload": "^3.2.1"
   },

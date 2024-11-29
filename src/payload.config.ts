@@ -1,4 +1,5 @@
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
+import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
 
 export default buildConfig({
@@ -14,6 +15,7 @@ export default buildConfig({
     },
   ],
   secret: "SECRET",
+  editor: lexicalEditor(),
   db: mongooseAdapter({
     url: "mongodb://localhost:27017/hono-app-test",
   }),

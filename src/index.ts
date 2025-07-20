@@ -3,13 +3,14 @@ import { Hono } from "hono";
 import config from "./payload.config.js";
 import { getPayload } from "payload";
 
+const payload = await getPayload({
+  config,
+});
+
 const app = new Hono();
 
 app.get("/", async (c) => {
   const now = Date.now();
-  const payload = await getPayload({
-    config,
-  });
   payload.logger.info(`${Date.now() - now}MS`);
   const posts = await payload.find({
     collection: "posts",
